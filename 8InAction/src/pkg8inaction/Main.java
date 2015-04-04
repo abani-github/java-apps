@@ -5,6 +5,10 @@
  */
 package pkg8inaction;
 
+import pkg8inaction.def.Message;
+import pkg8inaction.def.impls.MessageService;
+import pkg8inaction.def.impls.MessageServiceOverride;
+
 /**
  *
  * @author abani_000
@@ -16,6 +20,11 @@ public class Main {
      */
     public static void main(String[] args) {
         System.out.println("This is Java 8");
+        Message messageService = new MessageService();
+        Message messageOverride = new MessageServiceOverride();
+        
+        System.out.println(messageService.getMessage());
+        System.out.println(messageOverride.getMessage());
     }
     
 }
